@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Notas JSON - Dark</title>
+</head>
+
+<body class="h-full flex bg-gray-900 text-gray-100">
+    <div class="flex h-full w-full">
+        <!-- Sidebar inline, sem 'hidden' para desktop -->
+        <aside id="sidebar" class="w-64 bg-gray-800 p-4 overflow-auto">
+            <!-- Botão fechar apenas no mobile -->
+            <div class="sm:hidden mb-4">
+                <button id="closeBtn" class="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded">✕ Fechar</button>
+            </div>
+            <button id="newNoteBtn" class="w-full mb-4 bg-green-600 hover:bg-green-500 text-white py-2 rounded">+ Nova
+                Nota</button>
+            <ul id="notesList" class="space-y-2"></ul>
+        </aside>
+
+        <div class="flex-1 flex flex-col">
+            <!-- Menu toggle no mobile -->
+            <header class="sm:hidden p-2 bg-gray-800">
+                <button id="menuBtn" class="px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded">☰ Menu</button>
+            </header>
+
+            <main id="editor" class="flex-1 p-6 overflow-auto flex flex-col bg-gray-900">
+                <label class="block font-semibold mb-1">Título</label>
+                <input id="noteTitle" type="text" placeholder="Título"
+                    class="w-full p-2 border border-gray-700 bg-gray-800 rounded mb-4 text-gray-100 placeholder-gray-500" />
+
+                <label class="block font-semibold mb-1">Texto</label>
+                <div class="mb-2 flex space-x-2">
+                    <button id="boldBtn"
+                        class="px-2 py-1 bg-gray-800 border border-gray-700 rounded hover:bg-gray-700">B</button>
+                    <button id="italicBtn"
+                        class="px-2 py-1 bg-gray-800 border border-gray-700 rounded hover:bg-gray-700">I</button>
+                    <button id="copyAllBtn"
+                        class="px-2 py-1 bg-gray-800 border border-gray-700 rounded hover:bg-gray-700">📋 Copiar
+                        Tudo</button>
+                </div>
+                <div id="noteText" contenteditable="true"
+                    class="flex-1 w-full p-2 border border-gray-700 bg-gray-800 rounded overflow-auto whitespace-pre-wrap focus:outline-none mb-4 text-gray-100"
+                    placeholder="Cole ou digite o texto aqui (suporta formatação)"></div>
+
+                <div class="flex space-x-2 mt-auto">
+                    <button id="saveBtn"
+                        class="px-4 py-2 bg-green-600 hover:bg-green-500 text-white rounded">Salvar</button>
+                    <button id="deleteBtn"
+                        class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white rounded hidden">Excluir</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
