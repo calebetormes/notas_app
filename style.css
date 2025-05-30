@@ -1,0 +1,74 @@
+/* style.css */
+
+/* cores usáveis inspiradas no WhatsApp Web dark */
+:root {
+    --whatsapp-dark-bg: #131C21;
+    --whatsapp-dark-sidebar: #1F2C34;
+    --whatsapp-dark-panel: #191F23;
+    --whatsapp-dark-button: #2AAB5F;
+    --whatsapp-dark-text: #ECE5DD;
+}
+
+/* scrollbar customizada */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--whatsapp-dark-panel);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--whatsapp-dark-sidebar);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #484F57;
+}
+
+/* garante fundo global em dark */
+html.dark body {
+    background-color: var(--whatsapp-dark-bg);
+    color: var(--whatsapp-dark-text);
+}
+
+/* overrides de classes Tailwind já usadas */
+html.dark .bg-gray-100 {
+    background-color: var(--whatsapp-dark-sidebar) !important;
+}
+
+html.dark .bg-gray-200 {
+    background-color: var(--whatsapp-dark-panel) !important;
+}
+
+html.dark .bg-white {
+    background-color: var(--whatsapp-dark-panel) !important;
+}
+
+html.dark input,
+html.dark div[contenteditable] {
+    background-color: var(--whatsapp-dark-panel) !important;
+    color: var(--whatsapp-dark-text) !important;
+    border-color: #2F3337 !important;
+}
+
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700 {
+    color: var(--whatsapp-dark-text) !important;
+}
+
+/* botões principais */
+html.dark button.bg-blue-600 {
+    background-color: var(--whatsapp-dark-button) !important;
+}
+
+html.dark button.bg-green-500 {
+    background-color: #128C7E !important;
+}
+
+html.dark button.bg-red-500 {
+    background-color: #D21F3C !important;
+}
