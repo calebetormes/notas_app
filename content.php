@@ -1,7 +1,7 @@
 <!-- content.php -->
 <main id="editor"
     class="flex-1 p-6 overflow-auto flex flex-col bg-white dark:bg-[var(--whatsapp-dark-panel)] text-gray-900 dark:text-[var(--whatsapp-dark-text)]">
-    <label class="block font-semibold mb-1">Título</label>
+    <label class="block font-semibold mb-1">Município</label>
     <input id="noteTitle" type="text" placeholder="Título"
         class="w-full p-2 border rounded mb-4 bg-gray-50 dark:bg-[var(--whatsapp-dark-panel)] dark:border-[#2F3337] text-gray-900 dark:text-[var(--whatsapp-dark-text)]" />
 
@@ -25,3 +25,6 @@
         <button id="deleteBtn" class="px-4 py-2 bg-red-500 dark:bg-[#D21F3C] text-white rounded hidden">Excluir</button>
     </div>
 </main>
+<!-- container fixo para os toasts -->
+<div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col items-end space-y-2 pointer-events-none">
+</div>
